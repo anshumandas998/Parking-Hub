@@ -60,11 +60,6 @@ export default function LandingPage() {
                   Login
                 </Link>
               </Button>
-              <Button asChild className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
-                <Link to="/parking">
-                  Manage Parking <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
             </div>
           </div>
         </div>
@@ -129,16 +124,6 @@ export default function LandingPage() {
               >
                 <Link to="/login">
                   Get Started <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg"
-                className="border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 text-lg px-8 py-6"
-              >
-                <Link to="/parking">
-                  View Parking <BarChart3 className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
             </motion.div>
@@ -302,16 +287,6 @@ export default function LandingPage() {
                 >
                   <Link to="/login">
                     Get Started <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="lg"
-                  className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
-                >
-                  <Link to="/parking">
-                    View Parking <BarChart3 className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
               </div>
