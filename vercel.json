@@ -1,6 +1,9 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ]
+  ],
+  "build": {
+    "outputDirectory": "dist/client"
+  }
 }
 
