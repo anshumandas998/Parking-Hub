@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import { mochaPlugins } from "@getmocha/vite-plugins";
 
-// Only use Cloudflare plugin when NOT on Vercel
-const isVercel = process.env.VERCEL === "true" || process.env.NOW_VERCEL;
+// Detect if running on Vercel CI
+const isVercel = process.env.VERCEL === "true" || process.env.NOW_VERCEL || process.env.CI === "true";
 
 export default defineConfig({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,9 +19,10 @@ export default defineConfig({
     allowedHosts: true,
   },
   build: {
-    // For Vercel: output to dist (not dist/client)
+    // For Vercel: output to dist root
     // For Cloudflare: let the plugin handle it
     outDir: isVercel ? "dist" : undefined,
+    emptyOutDir: true,
     chunkSizeWarningLimit: 5000,
   },
   resolve: {
